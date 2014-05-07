@@ -1,5 +1,3 @@
-var app = angular.module('myApp', []);
-
 app.controller('TodosController', function($scope) {
   $scope.todos = [];
   $scope.newTodo = '';
