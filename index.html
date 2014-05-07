@@ -9,9 +9,9 @@
   <h1>My Todo List</h1>
 
   <div ng-controller='TodosController'>
-    <input ng-model="todo" type="text" />
-    <button ng-click="addTodo(todo)">Add</button>
- 
+    <form id="todo-form" ng-submit="addTodo()">
+      <input id="new-todo" ng-model="newTodo">
+    </form>
     <ul>
       <li ng-repeat="todo in todos">
         {{ todo }}

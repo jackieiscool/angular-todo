@@ -2,17 +2,15 @@ var app = angular.module('myApp', []);
 
 app.controller('TodosController', function($scope) {
   $scope.todos = [];
+  $scope.newTodo = '';
 
-  $scope.addTodo = function(todo) {
-    $scope.todos.push(todo);
+  $scope.addTodo = function() {
+    if ($scope.newTodo.length == 0) {
+      return
+    }
+    else {
+      $scope.todos.push($scope.newTodo);
+    }
+    $scope.newTodo = '';
   };
 });
-
-// app.controller('NewTodoController', function($scope) {
-//   $scope.addTodo = function(todo) {
-
-//   };
-// }).
-// controller('TodoListController', function($scope){
-
-// });
